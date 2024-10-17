@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body { 
+            text-align: center;
+            background-color: pink; 
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        ul { 
+            list-style-type: none; padding: 0; 
+        }
+        li { 
+            padding: 5px; margin: 5px 0; 
+            background-color: #f0f0f0; 
+        }
+        button { 
+            margin-left: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            border-radius: 10px;
+            font-size: 20px;
+         }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <input type="text" id="task" >
+    <button id="addTask">Add task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        document.getElementById("addTask").addEventListener("click", function() {
+            const task = document.getElementById("task").value;
+            if (task === "") {
+                alert("u must type something!");
+                return;
+            }
+
+            const li = document.createElement("li");
+            li.textContent = task;
+
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Delete";
+            deleteBtn.addEventListener("click", function() {
+                li.remove();
+            });
+
+            li.appendChild(deleteBtn);
+            document.getElementById("taskList").appendChild(li);
+            document.getElementById("task").value = "";
+        });
+    </script>
+
+<br>
+<br>
+<br>
+<a href="/1st exrcise.html">1st task</a>
+<br>
+<br>
+<a href="/3rd exercise.html">3rd task</a>
+<br>
+<br>
+<a href="/4th task.html">4th task</a>
+<br>
+<br>
+<a href="/5th task.html">5th task</a>
+</body>
+</html>

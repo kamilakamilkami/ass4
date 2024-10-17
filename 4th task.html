@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        button{
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            font-size: 20px;
+        }
+        body{
+            background-color: pink;
+            text-align: center;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <p>First number:</p><input type="text" id="f"><br>
+    <p>Second number:</p><input type="text" id="s">
+    <p id="result"></p>
+    <button type="button" onclick="Multiply()">Multiply</button>
+    <button type="button" onclick="Divide()">Divide</button>
+    <button type="button" onclick="Add()">Add</button>
+    <button type="button" onclick="Subtract()">Subtract</button>
+    <script>
+    function Multiply() {
+        var num1 = document.getElementById("f").value;
+        var num2 = document.getElementById("s").value;
+        document.getElementById('result').innerHTML = num1 * num2;
+     }
+    function Divide() {
+        var num1 = document.getElementById("f").value;
+        var num2 = document.getElementById("s").value;
+        document.getElementById('result').innerHTML = num1 / num2;
+    }
+
+    function Subtract(){
+        var num1 = document.getElementById("f").value;
+        var num2 = document.getElementById("s").value;
+        document.getElementById('result').innerHTML = num1 - num2;
+    }
+
+    function Add(){
+        var num1 = document.getElementById("f").value;
+        var num2 = document.getElementById("s").value;
+        document.getElementById('result').innerHTML = num1+num2;
+    }
+
+     </script>
+
+<br>
+<br>
+<br>
+<a href="/1st exrcise.html">1st task</a>
+<br>
+<br>
+<a href="/2nd exercise.html">2nd task</a>
+<br>
+<br>
+<a href="/3rd exercise.html">3rd task</a>
+<br>
+<br>
+<a href="/5th task.html">5th task</a>
+
+</body>
+</html>

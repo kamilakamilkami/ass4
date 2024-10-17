@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <style>
+        button{
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            font-size: 20px;
+        }
+        body{
+            background-color: pink;
+            text-align: center;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tax calculator</h1>
+    <input type="number" id="carPrice" placeholder="Enter car price">
+    <button onclick="calculateTax()">Calculate Tax</button>
+    <div id="taxResult"></div>
+
+<script>
+function calculateTax() {
+    let price = parseFloat(document.getElementById("carPrice").value);
+    let tax;
+    if (price > 10000) {
+        tax = price * 0.25;
+    } else if (price >= 5000 && price <= 10000) {
+        tax = price * 0.20;
+    } else {
+        tax = price * 0.15;
+    }
+    document.getElementById("taxResult").innerText = "Tax: $" + tax;
+}
+</script>
+
+<br>
+<br>
+<br>
+<a href="/1st exrcise.html">1st task</a>
+<br>
+<br>
+<a href="/2nd exercise.html">2nd task</a>
+<br>
+<br>
+<a href="/3rd exercise.html">3rd task</a>
+<br>
+<br>
+<a href="/4th task.html">4th task</a>
+
+</body>
+</html>
