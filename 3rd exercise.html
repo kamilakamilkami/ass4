@@ -35,10 +35,10 @@
         });
 
         document.getElementById("sortDesc").addEventListener("click", function() {
-            const input = document.getElementById("numbers").value;
+            const input = document.getElementById("number").value;
             const numArray = input.split(",").map(Number).filter(n => !isNaN(n));
             numArray.sort((a, b) => b - a);
-            document.getElementById("sortedResult").innerText = `Result of descending: ${numArray.join(", ")}`;
+            document.getElementById("result").innerText = `Result of descending: ${numArray.join(", ")}`;
         });
     </script>
 
